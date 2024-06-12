@@ -43,22 +43,14 @@
             this.manageMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageTrainersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addTrainerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewTrainersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equipmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEquipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewEquipmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faculityManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFaculityMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewFaculityMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.customToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +85,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(428, 110);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Schedule Class";
+            this.button2.Text = "Analytics";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
@@ -199,11 +191,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageMembersToolStripMenuItem,
-            this.manageTrainersToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.reportsAndAnalyticsToolStripMenuItem,
-            this.equipmenToolStripMenuItem,
-            this.faculityManagementToolStripMenuItem});
+            this.faculityManagementToolStripMenuItem,
+            this.reportsAndAnalyticsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -220,23 +209,39 @@
             this.addToolStripMenuItem,
             this.viewMembersToolStripMenuItem});
             this.manageMembersToolStripMenuItem.Name = "manageMembersToolStripMenuItem";
+
             this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(213, 29);
             this.manageMembersToolStripMenuItem.Text = "Members Management";
+
+            this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.manageMembersToolStripMenuItem.Text = "Members";
+
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+
             this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.addToolStripMenuItem.Text = "Add Member";
+
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Text = "Manage Member";
+
             // 
             // viewMembersToolStripMenuItem
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
+
             this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+
             this.viewMembersToolStripMenuItem.Text = "View Members";
+            this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click);
             // 
+
             // manageTrainersToolStripMenuItem
             // 
             this.manageTrainersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -268,18 +273,41 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(160, 29);
             this.toolStripMenuItem1.Text = "Class Scheduling";
+
+            // faculityManagementToolStripMenuItem
             // 
-            // addClassToolStripMenuItem
+            this.faculityManagementToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.faculityManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addFaculityMemberToolStripMenuItem,
+            this.viewFaculityMembersToolStripMenuItem});
+            this.faculityManagementToolStripMenuItem.Name = "faculityManagementToolStripMenuItem";
+            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.faculityManagementToolStripMenuItem.Text = "Staff";
+
             // 
+            // addFaculityMemberToolStripMenuItem
+            // 
+
             this.addClassToolStripMenuItem.Name = "addClassToolStripMenuItem";
             this.addClassToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
             this.addClassToolStripMenuItem.Text = "Add Class";
+
+            this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.addFaculityMemberToolStripMenuItem.Text = "Manage Staff Members";
+
             // 
-            // viewClassesToolStripMenuItem
+            // viewFaculityMembersToolStripMenuItem
             // 
+
             this.viewClassesToolStripMenuItem.Name = "viewClassesToolStripMenuItem";
             this.viewClassesToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
             this.viewClassesToolStripMenuItem.Text = "View Classes";
+
+            this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.viewFaculityMembersToolStripMenuItem.Text = "View Staff Members";
+
             // 
             // reportsAndAnalyticsToolStripMenuItem
             // 
@@ -287,6 +315,7 @@
             this.reportsAndAnalyticsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.membershipToolStripMenuItem,
             this.attendenceToolStripMenuItem,
+            this.toolStripSeparator1,
             this.customToolStripMenuItem});
             this.reportsAndAnalyticsToolStripMenuItem.Name = "reportsAndAnalyticsToolStripMenuItem";
             this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
@@ -295,19 +324,35 @@
             // membershipToolStripMenuItem
             // 
             this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
+
             this.membershipToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.membershipToolStripMenuItem.Text = "Membership";
+
+            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.membershipToolStripMenuItem.Text = "Members Analytics";
+
             // 
             // attendenceToolStripMenuItem
             // 
             this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
+
             this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.attendenceToolStripMenuItem.Text = "Attendance";
+
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.attendenceToolStripMenuItem.Text = "Staff Analytics";
+
             this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // customToolStripMenuItem
             // 
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
+
             this.customToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.customToolStripMenuItem.Text = "Custom";
             // 
@@ -355,6 +400,11 @@
             this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.viewFaculityMembersToolStripMenuItem.Text = "View Faculity Members";
             // 
+
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.customToolStripMenuItem.Text = "Custom";
+            // 
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -401,24 +451,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem manageMembersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageTrainersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reportsAndAnalyticsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equipmenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faculityManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMembersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addTrainerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewTrainersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addClassToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewClassesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem membershipToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attendenceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEquipmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewEquipmentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addFaculityMemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewFaculityMembersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

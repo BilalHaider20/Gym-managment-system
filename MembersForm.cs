@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Gym_Manager
 {
     public partial class MembersForm : Form
     {
-        private string connection_string="";
+        private string connection_string= "Data Source=AbdulSaboor\\SQLEXPRESS;database=gymManagement;Integrated Security=True;Encrypt=False";
         public MembersForm()
         {
             InitializeComponent();
@@ -40,10 +41,11 @@ namespace Gym_Manager
         {
             dataGridView1.Columns.Add("MemberID","ID");
             dataGridView1.Columns.Add("Name","Name");
-            dataGridView1.Columns.Add("Age","Age");
+            dataGridView1.Columns.Add("DateOfBirth","Date of Birth");
             dataGridView1.Columns.Add("Gender","Gender");
-            dataGridView1.Columns.Add("MembershipType","MemberShip");
-            dataGridView1.Columns.Add("TrainingType","TrainingType");
+            dataGridView1.Columns.Add("Age","Age");
+            dataGridView1.Columns.Add("MembershipType","Membership");
+            dataGridView1.Columns.Add("TrainingType","Training Type");
             dataGridView1.Columns.Add("Trainer","Trainer");
             dataGridView1.Columns.Add("Duration","Duration");
 
@@ -57,6 +59,30 @@ namespace Gym_Manager
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ExecuteQuery(string query)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection_string))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            DataTable table = new DataTable();
+                            table.Load(reader);
+                            dataGridView1.DataSource = table;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

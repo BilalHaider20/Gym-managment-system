@@ -57,5 +57,12 @@ namespace Gym_Manager
             viewMembers ViewMembersForm = new viewMembers();
             ViewMembersForm.ShowDialog();
         }
+
+        private void viewFaculityMembersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewStaff ViewStaffForm = new viewStaff();
+            ViewStaffForm.ShowDialog();
+
+        }
     }
 }

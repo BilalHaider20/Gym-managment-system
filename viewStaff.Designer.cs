@@ -2,7 +2,7 @@
 
 namespace Gym_Manager
 {
-    partial class viewMembers
+    partial class viewStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@ namespace Gym_Manager
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewMembers));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -41,11 +40,11 @@ namespace Gym_Manager
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(371, 9);
+            this.label1.Location = new System.Drawing.Point(419, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 46);
+            this.label1.Size = new System.Drawing.Size(206, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gym Members";
+            this.label1.Text = "Gym Staff";
             // 
             // dataGridView1
             // 
@@ -59,7 +58,7 @@ namespace Gym_Manager
             this.dataGridView1.Size = new System.Drawing.Size(1032, 596);
             this.dataGridView1.TabIndex = 1;
             // 
-            // viewMembers
+            // viewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,9 +69,8 @@ namespace Gym_Manager
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "viewMembers";
+            this.Name = "viewStaff";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Gym Management (admin)";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

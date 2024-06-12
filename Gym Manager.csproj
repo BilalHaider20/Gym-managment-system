@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewStaff.Designer.cs">
+      <DependentUpon>viewStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="viewStaff.resx">
+      <DependentUpon>viewStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

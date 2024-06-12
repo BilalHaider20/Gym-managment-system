@@ -15,54 +15,100 @@ namespace Gym_Manager
     public partial class MembersForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
+
         public MembersForm()
         {
             InitializeComponent();
-            MembershipType.Items.Add("Basic");
-            MembershipType.Items.Add("Premium");
-            MembershipType.Items.Add("Gold");
-            MembershipType.Items.Add("Student");
-
-            TrainingType.Items.Add("Weigth Gain");
-            TrainingType.Items.Add("Weigth Loss");
-            TrainingType.Items.Add("Strength Training");
-            TrainingType.Items.Add("Cardio");
-            TrainingType.Items.Add("Legs Training");
-            TrainingType.Items.Add("Sports Training");
-            TrainingType.Items.Add("Rehabilition Training");
-            TrainingType.Items.Add("Core Abs Training");      
+            trainers.Items.Add(new ComboBoxItem("None","0"));
         }
 
-       
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void InitializeDataGridView()
-        {
-            dataGridView1.Columns.Add("MemberID","ID");
-            dataGridView1.Columns.Add("Name","Name");
-            dataGridView1.Columns.Add("DateOfBirth","Date of Birth");
-            dataGridView1.Columns.Add("Gender","Gender");
-            dataGridView1.Columns.Add("Age","Age");
-            dataGridView1.Columns.Add("MembershipType","Membership");
-            dataGridView1.Columns.Add("TrainingType","Training Type");
-            dataGridView1.Columns.Add("Trainer","Trainer");
-            dataGridView1.Columns.Add("Duration","Duration");
-
-            
-        }
         private void MemberForm_Load(object sender, EventArgs e)
         {
-            InitializeDataGridView();
+            LoadTrainers();
+            LoadMembershipTypes();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void LoadTrainers()
         {
-
+            string query = "SELECT staffID, staff_name, position FROM staff";
+            DataTable trainersTable = ExecuteQuery(query);
+            foreach (DataRow row in trainersTable.Rows)
+            {
+                string display_name = (row["staff_name"].ToString() + " (" + row["position"].ToString() + ")");
+                trainers.Items.Add(new ComboBoxItem(display_name, row["staffID"].ToString()));
+            }
         }
 
-        private void ExecuteQuery(string query)
+        private void LoadMembershipTypes()
+        {
+            string query = "SELECT membershipTypeID, TypeName FROM membershipTypes";
+            DataTable membershipTypesTable = ExecuteQuery(query);
+            foreach (DataRow row in membershipTypesTable.Rows)
+            {
+                MembershipType.Items.Add(new ComboBoxItem(row["TypeName"].ToString(), row["membershipTypeID"].ToString()));
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddMember();
+        }
+
+        private void AddMember()
+        {
+            string name = textBox1.Text;
+            string gender="";
+            if (radioButton1.Checked)
+            {
+                gender = "Male";
+            }
+            else if (radioButton2.Checked)
+            {
+                gender = "Female";
+            }
+            string phone = textBox3.Text;
+            DateTime dateOfBirth = dateTimePicker1.Value;
+            int membershipTypeID = (MembershipType.SelectedItem as ComboBoxItem).Value;
+            int? trainerID = (trainers.SelectedItem as ComboBoxItem)?.Value;
+            if (trainerID == 0)
+            {
+                trainerID = null;
+            }
+            int duration = int.Parse(label9.Text);
+            string status = "Active";
+
+            string query = "INSERT INTO members (memberName, DateOfBirth, Gender, Phone, membershipTypeID, trainerID, membershipStartDate, membershipEndDate, MembershipStatus) " +
+                    "VALUES (@name, @dateOfBirth, @gender, @phone, @membershipTypeID, @trainerID, getdate(), DATEADD(month, @duration, getdate()), @status)";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@gender", gender);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
+                    cmd.Parameters.AddWithValue("@membershipTypeID", membershipTypeID);
+                    cmd.Parameters.AddWithValue("@trainerID", (object)trainerID ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@status", status);
+                    cmd.Parameters.AddWithValue("@duration", duration);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Member added successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error adding member: " + ex.Message);
+                    }
+                }
+            }
+            
+        }
+
+        public DataTable ExecuteQuery(string query)
         {
             try
             {
@@ -75,7 +121,7 @@ namespace Gym_Manager
                         {
                             DataTable table = new DataTable();
                             table.Load(reader);
-                            dataGridView1.DataSource = table;
+                            return table;
                         }
                     }
                 }
@@ -83,7 +129,37 @@ namespace Gym_Manager
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return null;
             }
+        }
+
+        private void MembershipType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string membershipTypeID = (MembershipType.SelectedItem as ComboBoxItem).Value.ToString();
+            string query = "SELECT membershipTypeID, DurationMonths from membershipTypes";
+            DataTable table12 = ExecuteQuery(query);
+            foreach (DataRow row in table12.Rows)
+            {
+                if (row["membershipTypeID"].ToString()==membershipTypeID)
+                    label9.Text = row["DurationMonths"].ToString();
+            }
+        }
+    }
+
+    public class ComboBoxItem
+    {
+        public string Display { get; set; }
+        public int Value { get; set; }
+
+        public ComboBoxItem(string display, string value)
+        {
+            Display = display;
+            Value = int.Parse(value);
+        }
+
+        public override string ToString()
+        {
+            return Display;
         }
     }
 }

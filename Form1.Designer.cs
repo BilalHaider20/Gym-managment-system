@@ -43,14 +43,14 @@
             this.manageMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faculityManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFaculityMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewFaculityMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.customToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -218,37 +218,7 @@
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
             this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewMembersToolStripMenuItem.Text = "View Members";
-            // 
-            // reportsAndAnalyticsToolStripMenuItem
-            // 
-            this.reportsAndAnalyticsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.reportsAndAnalyticsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.membershipToolStripMenuItem,
-            this.attendenceToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.customToolStripMenuItem});
-            this.reportsAndAnalyticsToolStripMenuItem.Name = "reportsAndAnalyticsToolStripMenuItem";
-            this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.reportsAndAnalyticsToolStripMenuItem.Text = "Analytics";
-            // 
-            // membershipToolStripMenuItem
-            // 
-            this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
-            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.membershipToolStripMenuItem.Text = "Membership";
-            // 
-            // attendenceToolStripMenuItem
-            // 
-            this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.attendenceToolStripMenuItem.Text = "Attendance";
-            this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
-            // 
-            // customToolStripMenuItem
-            // 
-            this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.customToolStripMenuItem.Text = "Custom";
+            this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click);
             // 
             // faculityManagementToolStripMenuItem
             // 
@@ -272,10 +242,41 @@
             this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.viewFaculityMembersToolStripMenuItem.Text = "View Staff Members";
             // 
+            // reportsAndAnalyticsToolStripMenuItem
+            // 
+            this.reportsAndAnalyticsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.reportsAndAnalyticsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.membershipToolStripMenuItem,
+            this.attendenceToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.customToolStripMenuItem});
+            this.reportsAndAnalyticsToolStripMenuItem.Name = "reportsAndAnalyticsToolStripMenuItem";
+            this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportsAndAnalyticsToolStripMenuItem.Text = "Analytics";
+            // 
+            // membershipToolStripMenuItem
+            // 
+            this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
+            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.membershipToolStripMenuItem.Text = "Membership";
+            // 
+            // attendenceToolStripMenuItem
+            // 
+            this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.attendenceToolStripMenuItem.Text = "Attendance";
+            this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(172, 6);
+            // 
+            // customToolStripMenuItem
+            // 
+            this.customToolStripMenuItem.Name = "customToolStripMenuItem";
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.customToolStripMenuItem.Text = "Custom";
             // 
             // Form1
             // 

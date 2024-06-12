@@ -221,11 +221,7 @@
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.addToolStripMenuItem.Text = "Add Member";
-
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.addToolStripMenuItem.Text = "Manage Member";
 
             // 
@@ -233,10 +229,7 @@
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
 
             this.viewMembersToolStripMenuItem.Text = "View Members";
             this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click);
@@ -307,7 +300,7 @@
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
             this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
             this.viewFaculityMembersToolStripMenuItem.Text = "View Staff Members";
-
+            this.viewFaculityMembersToolStripMenuItem.Click += new System.EventHandler(this.viewFaculityMembersToolStripMenuItem_Click);
             // 
             // reportsAndAnalyticsToolStripMenuItem
             // 
@@ -324,22 +317,14 @@
             // membershipToolStripMenuItem
             // 
             this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
-
-            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
-            this.membershipToolStripMenuItem.Text = "Membership";
-
-            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.membershipToolStripMenuItem.Text = "Members Analytics";
 
             // 
             // attendenceToolStripMenuItem
             // 
             this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
-
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
-            this.attendenceToolStripMenuItem.Text = "Attendance";
-
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.attendenceToolStripMenuItem.Text = "Staff Analytics";
 
             this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
@@ -347,61 +332,12 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(214, 6);
             // 
             // customToolStripMenuItem
             // 
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
-            this.customToolStripMenuItem.Text = "Custom";
-            // 
-            // equipmenToolStripMenuItem
-            // 
-            this.equipmenToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.equipmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEquipmentToolStripMenuItem,
-            this.viewEquipmentsToolStripMenuItem});
-            this.equipmenToolStripMenuItem.Name = "equipmenToolStripMenuItem";
-            this.equipmenToolStripMenuItem.Size = new System.Drawing.Size(232, 29);
-            this.equipmenToolStripMenuItem.Text = "Equipments Management";
-            // 
-            // addEquipmentToolStripMenuItem
-            // 
-            this.addEquipmentToolStripMenuItem.Name = "addEquipmentToolStripMenuItem";
-            this.addEquipmentToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
-            this.addEquipmentToolStripMenuItem.Text = "Add Equipment";
-            // 
-            // viewEquipmentsToolStripMenuItem
-            // 
-            this.viewEquipmentsToolStripMenuItem.Name = "viewEquipmentsToolStripMenuItem";
-            this.viewEquipmentsToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
-            this.viewEquipmentsToolStripMenuItem.Text = "View Equipments";
-            // 
-            // faculityManagementToolStripMenuItem
-            // 
-            this.faculityManagementToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.faculityManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addFaculityMemberToolStripMenuItem,
-            this.viewFaculityMembersToolStripMenuItem});
-            this.faculityManagementToolStripMenuItem.Name = "faculityManagementToolStripMenuItem";
-            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(196, 29);
-            this.faculityManagementToolStripMenuItem.Text = "Faculity Management";
-            // 
-            // addFaculityMemberToolStripMenuItem
-            // 
-            this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
-            this.addFaculityMemberToolStripMenuItem.Text = "Add Faculity Member";
-            // 
-            // viewFaculityMembersToolStripMenuItem
-            // 
-            this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
-            this.viewFaculityMembersToolStripMenuItem.Text = "View Faculity Members";
-            // 
-
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.customToolStripMenuItem.Text = "Custom";
             // 
 

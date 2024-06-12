@@ -52,16 +52,16 @@ namespace Gym_Manager
 
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MembersForm form = new MembersForm();
-            form.ShowDialog();
-
         private void viewMembersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             viewMembers ViewMembersForm = new viewMembers();
             ViewMembersForm.ShowDialog();
+        }
+
+        private void viewFaculityMembersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewStaff ViewStaffForm = new viewStaff();
+            ViewStaffForm.ShowDialog();
 
         }
     }

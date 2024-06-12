@@ -72,12 +72,14 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(38, 175);
+            this.button1.Location = new System.Drawing.Point(43, 219);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(380, 88);
+            this.button1.Size = new System.Drawing.Size(428, 110);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Member";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -86,9 +88,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(38, 363);
+            this.button2.Location = new System.Drawing.Point(43, 454);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(380, 88);
+            this.button2.Size = new System.Drawing.Size(428, 110);
             this.button2.TabIndex = 1;
             this.button2.Text = "Schedule Class";
             this.button2.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(38, 269);
+            this.button3.Location = new System.Drawing.Point(43, 336);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(380, 88);
+            this.button3.Size = new System.Drawing.Size(428, 110);
             this.button3.TabIndex = 2;
             this.button3.Text = "View Members";
             this.button3.UseVisualStyleBackColor = false;
@@ -116,9 +120,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(628, 83);
+            this.panel1.Location = new System.Drawing.Point(706, 104);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(391, 556);
+            this.panel1.Size = new System.Drawing.Size(440, 695);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -127,9 +132,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label6.Location = new System.Drawing.Point(175, 340);
+            this.label6.Location = new System.Drawing.Point(197, 425);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 80);
+            this.label6.Size = new System.Drawing.Size(128, 96);
             this.label6.TabIndex = 9;
             this.label6.Text = "00";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -139,9 +144,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(175, 66);
+            this.label5.Location = new System.Drawing.Point(197, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 80);
+            this.label5.Size = new System.Drawing.Size(128, 96);
             this.label5.TabIndex = 8;
             this.label5.Text = "00";
             // 
@@ -150,9 +155,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(175, 215);
+            this.label4.Location = new System.Drawing.Point(197, 269);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 80);
+            this.label4.Size = new System.Drawing.Size(128, 96);
             this.label4.TabIndex = 7;
             this.label4.Text = "00";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -161,9 +166,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 311);
+            this.label3.Location = new System.Drawing.Point(30, 389);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 29);
+            this.label3.Size = new System.Drawing.Size(189, 32);
             this.label3.TabIndex = 6;
             this.label3.Text = "Total Trainers";
             // 
@@ -171,9 +176,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 168);
+            this.label2.Location = new System.Drawing.Point(30, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 29);
+            this.label2.Size = new System.Drawing.Size(216, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Active Members";
             // 
@@ -181,15 +186,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 24);
+            this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 29);
+            this.label1.Size = new System.Drawing.Size(202, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Total Members";
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageMembersToolStripMenuItem,
@@ -200,8 +206,9 @@
             this.faculityManagementToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1188, 33);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -213,21 +220,21 @@
             this.addToolStripMenuItem,
             this.viewMembersToolStripMenuItem});
             this.manageMembersToolStripMenuItem.Name = "manageMembersToolStripMenuItem";
-            this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
+            this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(213, 29);
             this.manageMembersToolStripMenuItem.Text = "Members Management";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.addToolStripMenuItem.Text = "Add Member";
             // 
             // viewMembersToolStripMenuItem
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.viewMembersToolStripMenuItem.Text = "View Members";
             // 
             // manageTrainersToolStripMenuItem
@@ -237,19 +244,19 @@
             this.addTrainerToolStripMenuItem,
             this.viewTrainersToolStripMenuItem});
             this.manageTrainersToolStripMenuItem.Name = "manageTrainersToolStripMenuItem";
-            this.manageTrainersToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.manageTrainersToolStripMenuItem.Size = new System.Drawing.Size(197, 29);
             this.manageTrainersToolStripMenuItem.Text = "Trainers Management";
             // 
             // addTrainerToolStripMenuItem
             // 
             this.addTrainerToolStripMenuItem.Name = "addTrainerToolStripMenuItem";
-            this.addTrainerToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.addTrainerToolStripMenuItem.Size = new System.Drawing.Size(215, 34);
             this.addTrainerToolStripMenuItem.Text = "Add Trainer";
             // 
             // viewTrainersToolStripMenuItem
             // 
             this.viewTrainersToolStripMenuItem.Name = "viewTrainersToolStripMenuItem";
-            this.viewTrainersToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.viewTrainersToolStripMenuItem.Size = new System.Drawing.Size(215, 34);
             this.viewTrainersToolStripMenuItem.Text = "View Trainers";
             // 
             // toolStripMenuItem1
@@ -259,19 +266,19 @@
             this.addClassToolStripMenuItem,
             this.viewClassesToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(133, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(160, 29);
             this.toolStripMenuItem1.Text = "Class Scheduling";
             // 
             // addClassToolStripMenuItem
             // 
             this.addClassToolStripMenuItem.Name = "addClassToolStripMenuItem";
-            this.addClassToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.addClassToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
             this.addClassToolStripMenuItem.Text = "Add Class";
             // 
             // viewClassesToolStripMenuItem
             // 
             this.viewClassesToolStripMenuItem.Name = "viewClassesToolStripMenuItem";
-            this.viewClassesToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.viewClassesToolStripMenuItem.Size = new System.Drawing.Size(213, 34);
             this.viewClassesToolStripMenuItem.Text = "View Classes";
             // 
             // reportsAndAnalyticsToolStripMenuItem
@@ -282,26 +289,26 @@
             this.attendenceToolStripMenuItem,
             this.customToolStripMenuItem});
             this.reportsAndAnalyticsToolStripMenuItem.Name = "reportsAndAnalyticsToolStripMenuItem";
-            this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.reportsAndAnalyticsToolStripMenuItem.Text = "Analytics";
             // 
             // membershipToolStripMenuItem
             // 
             this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
-            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.membershipToolStripMenuItem.Text = "Membership";
             // 
             // attendenceToolStripMenuItem
             // 
             this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.attendenceToolStripMenuItem.Text = "Attendance";
             this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
             // 
             // customToolStripMenuItem
             // 
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(214, 34);
             this.customToolStripMenuItem.Text = "Custom";
             // 
             // equipmenToolStripMenuItem
@@ -311,19 +318,19 @@
             this.addEquipmentToolStripMenuItem,
             this.viewEquipmentsToolStripMenuItem});
             this.equipmenToolStripMenuItem.Name = "equipmenToolStripMenuItem";
-            this.equipmenToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
+            this.equipmenToolStripMenuItem.Size = new System.Drawing.Size(232, 29);
             this.equipmenToolStripMenuItem.Text = "Equipments Management";
             // 
             // addEquipmentToolStripMenuItem
             // 
             this.addEquipmentToolStripMenuItem.Name = "addEquipmentToolStripMenuItem";
-            this.addEquipmentToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.addEquipmentToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.addEquipmentToolStripMenuItem.Text = "Add Equipment";
             // 
             // viewEquipmentsToolStripMenuItem
             // 
             this.viewEquipmentsToolStripMenuItem.Name = "viewEquipmentsToolStripMenuItem";
-            this.viewEquipmentsToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.viewEquipmentsToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.viewEquipmentsToolStripMenuItem.Text = "View Equipments";
             // 
             // faculityManagementToolStripMenuItem
@@ -333,29 +340,29 @@
             this.addFaculityMemberToolStripMenuItem,
             this.viewFaculityMembersToolStripMenuItem});
             this.faculityManagementToolStripMenuItem.Name = "faculityManagementToolStripMenuItem";
-            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(196, 29);
             this.faculityManagementToolStripMenuItem.Text = "Faculity Management";
             // 
             // addFaculityMemberToolStripMenuItem
             // 
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.addFaculityMemberToolStripMenuItem.Text = "Add Faculity Member";
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(294, 34);
             this.viewFaculityMembersToolStripMenuItem.Text = "View Faculity Members";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImage = global::Gym_Manager.Properties.Resources.Untitled_design1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1056, 681);
+            this.ClientSize = new System.Drawing.Size(1188, 851);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
@@ -364,9 +371,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym Management (admin)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

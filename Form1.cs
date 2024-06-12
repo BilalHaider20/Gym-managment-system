@@ -51,5 +51,11 @@ namespace Gym_Manager
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MembersForm form = new MembersForm();
+            form.ShowDialog();
+        }
     }
 }

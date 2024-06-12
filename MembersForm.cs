@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,7 +14,7 @@ namespace Gym_Manager
 {
     public partial class MembersForm : Form
     {
-        private string connection_string= "Data Source=AbdulSaboor\\SQLEXPRESS;database=gymManagement;Integrated Security=True;Encrypt=False";
+        string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
         public MembersForm()
         {
             InitializeComponent();
@@ -65,7 +66,7 @@ namespace Gym_Manager
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connection_string))
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))

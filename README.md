@@ -1,1 +1,1 @@
-# Gym-managment-system
+# Gym-management-system

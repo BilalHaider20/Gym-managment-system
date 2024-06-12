@@ -257,25 +257,25 @@
             // membershipToolStripMenuItem
             // 
             this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
-            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.membershipToolStripMenuItem.Text = "Membership";
+            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.membershipToolStripMenuItem.Text = "Members Analytics";
             // 
             // attendenceToolStripMenuItem
             // 
             this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
-            this.attendenceToolStripMenuItem.Text = "Attendance";
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.attendenceToolStripMenuItem.Text = "Staff Analytics";
             this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(172, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // customToolStripMenuItem
             // 
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.customToolStripMenuItem.Text = "Custom";
             // 
             // Form1

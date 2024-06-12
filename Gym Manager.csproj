@@ -81,12 +81,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\3643746-add-friend-member-people-plus_113411.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled design.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Untitled design1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -211,14 +211,15 @@
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addToolStripMenuItem.Text = "Manage Member";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // viewMembersToolStripMenuItem
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewMembersToolStripMenuItem.Text = "View Members";
             // 
             // faculityManagementToolStripMenuItem

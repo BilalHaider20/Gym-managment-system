@@ -63,5 +63,11 @@ namespace Gym_Manager
         {
 
         }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MembersForm form = new MembersForm();
+            form.ShowDialog();
+        }
     }
 }

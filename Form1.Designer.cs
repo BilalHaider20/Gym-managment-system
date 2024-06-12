@@ -82,7 +82,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(380, 88);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Schedule Class";
+            this.button2.Text = "Analytics";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3

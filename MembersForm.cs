@@ -28,10 +28,7 @@ namespace Gym_Manager
             TrainingType.Items.Add("Legs Training");
             TrainingType.Items.Add("Sports Training");
             TrainingType.Items.Add("Rehabilition Training");
-            TrainingType.Items.Add("Rehabilition Training");
-            TrainingType.Items.Add("Core Abs Training");
-
-      
+            TrainingType.Items.Add("Core Abs Training");      
         }
 
        
@@ -55,7 +52,11 @@ namespace Gym_Manager
         private void MemberForm_Load(object sender, EventArgs e)
         {
             InitializeDataGridView();
-          
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

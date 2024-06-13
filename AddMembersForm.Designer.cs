@@ -1,6 +1,6 @@
 ﻿namespace Gym_Manager
 {
-    partial class MembersForm
+    partial class AddMembersForm
     {
         /// <summary>
         /// Required designer variable.
@@ -151,6 +151,7 @@
             this.trainers.Name = "trainers";
             this.trainers.Size = new System.Drawing.Size(229, 24);
             this.trainers.TabIndex = 14;
+            this.trainers.Text = "None";
             // 
             // label8
             // 
@@ -220,7 +221,7 @@
             this.label9.Size = new System.Drawing.Size(23, 16);
             this.label9.TabIndex = 25;
             // 
-            // MembersForm
+            // AddMembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +245,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "MembersForm";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AddMembersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MembersForm";
             this.Load += new System.EventHandler(this.MemberForm_Load);

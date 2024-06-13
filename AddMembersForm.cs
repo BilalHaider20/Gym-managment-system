@@ -116,6 +116,7 @@ namespace Gym_Manager
                 }
             }
             button1.Text = "Update Member";
+            label1.Text = "Edit Member";
             button1.Click -= button1_Click;
             button1.Click += new EventHandler(UpdateMember);
         }

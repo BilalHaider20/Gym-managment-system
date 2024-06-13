@@ -25,7 +25,9 @@ namespace Gym_Manager
             LoadMembershipTypes();
             statusDropDown.Visible = false;
             label11.Visible = false;
-            MembershipType.SelectedIndex = 0;
+            if(MembershipType.Items.Count > 0)
+                MembershipType.SelectedIndex = 0;
+            if(trainers.Items.Count > 0)
             trainers.SelectedIndex = 0;
         }
 
@@ -114,7 +116,8 @@ namespace Gym_Manager
                                     }
                             }
                             else
-                                trainers.SelectedIndex = 0;
+                                if(trainers.Items.Count > 0)
+                                    trainers.SelectedIndex = 0;
                         }
                     }
                 }

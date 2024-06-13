@@ -149,6 +149,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrainer.Designer.cs">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddTrainer.resx">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainDashboard.resx">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </EmbeddedResource>

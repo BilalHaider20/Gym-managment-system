@@ -129,6 +129,11 @@ namespace Gym_Manager
             }
         }
 
-        
+        private void addFaculityMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddTrainer form = new AddTrainer();
+            form.ShowDialog();
+            countMembers();
+        }
     }
 }

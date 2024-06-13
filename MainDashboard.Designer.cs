@@ -49,9 +49,9 @@
             this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membershipAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.customToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membershipAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -239,6 +239,7 @@
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
             this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.addFaculityMemberToolStripMenuItem.Text = "Add Staff Member";
+            this.addFaculityMemberToolStripMenuItem.Click += new System.EventHandler(this.addFaculityMemberToolStripMenuItem_Click);
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
@@ -272,6 +273,12 @@
             this.attendenceToolStripMenuItem.Text = "Staff Analytics";
             this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
             // 
+            // membershipAnalyticsToolStripMenuItem
+            // 
+            this.membershipAnalyticsToolStripMenuItem.Name = "membershipAnalyticsToolStripMenuItem";
+            this.membershipAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.membershipAnalyticsToolStripMenuItem.Text = "Membership Analytics";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -283,13 +290,7 @@
             this.customToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.customToolStripMenuItem.Text = "Custom";
             // 
-            // membershipAnalyticsToolStripMenuItem
-            // 
-            this.membershipAnalyticsToolStripMenuItem.Name = "membershipAnalyticsToolStripMenuItem";
-            this.membershipAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.membershipAnalyticsToolStripMenuItem.Text = "Membership Analytics";
-            // 
-            // Form1
+            // MainDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,7 +307,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainDashboard";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym Management (admin)";

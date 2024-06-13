@@ -37,7 +37,6 @@ namespace Gym_Manager
             LoadTrainers();
             LoadMembershipTypes();
             loadMemberData(memberID);
-            trainers.SelectedIndex = 0;
         }
 
         private void MemberForm_Load(object sender, EventArgs e)
@@ -105,15 +104,17 @@ namespace Gym_Manager
                             if (reader["trainerID"] != DBNull.Value)
                             {
                                 int trainerID = Convert.ToInt32(reader["trainerID"]);
-                                foreach (ComboBoxItem item in trainers.Items)
-                                {
-                                    if (item.Value == trainerID)
+                                    foreach (ComboBoxItem item in trainers.Items)
                                     {
-                                        trainers.SelectedItem = item;
-                                        break;
+                                        if (item.Value == trainerID)
+                                        {
+                                            trainers.SelectedItem = item;
+                                            break;
+                                        }
                                     }
-                                }
                             }
+                            else
+                                trainers.SelectedIndex = 0;
                         }
                     }
                 }

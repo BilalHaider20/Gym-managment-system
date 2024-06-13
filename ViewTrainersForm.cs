@@ -119,14 +119,30 @@ namespace Gym_Manager
 
         private void DeleteTrainer(int staffID)
         {
-            var result = MessageBox.Show("Are you sure you want to delete this Trainer?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            string checkMembersQuery = "SELECT COUNT(*) FROM members WHERE TrainerID = @staffID";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM staff WHERE staffID = @staffID";
-                using (SqlConnection con = new SqlConnection(connectionString))
+                con.Open();
+
+                using (SqlCommand checkMembersCmd = new SqlCommand(checkMembersQuery, con))
                 {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    checkMembersCmd.Parameters.AddWithValue("@staffID", staffID);
+                    int memberCount = (int)checkMembersCmd.ExecuteScalar();
+
+                    if (memberCount > 0)
+                    {
+                        MessageBox.Show($"Trainer cannot be deleted because they are currently associated with {memberCount} members.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                var result = MessageBox.Show("Are you sure you want to delete this Trainer?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    string del_query = "DELETE FROM staff WHERE staffID = @staffID";
+
+                    using (SqlCommand cmd = new SqlCommand(del_query, con))
                     {
                         cmd.Parameters.AddWithValue("@staffID", staffID);
                         try
@@ -144,5 +160,6 @@ namespace Gym_Manager
                 }
             }
         }
+
     }
 }

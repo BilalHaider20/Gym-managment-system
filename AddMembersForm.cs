@@ -15,17 +15,31 @@ namespace Gym_Manager
     public partial class AddMembersForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
+        private int? memberIdToEdit = null;
 
         public AddMembersForm()
         {
             InitializeComponent();
-            trainers.Items.Add(new ComboBoxItem("None","0"));
+            trainers.Items.Add(new ComboBoxItem("None", "0"));
+            LoadTrainers();
+            LoadMembershipTypes();
+            statusDropDown.Visible = false;
+            label11.Visible = false;    
+        }
+
+        public AddMembersForm(int memberID)
+        {
+            InitializeComponent();
+            memberIdToEdit = memberID;
+            trainers.Items.Add(new ComboBoxItem("None", "0"));
+            LoadTrainers();
+            LoadMembershipTypes();
+            loadMemberData(memberID);
         }
 
         private void MemberForm_Load(object sender, EventArgs e)
         {
-            LoadTrainers();
-            LoadMembershipTypes();
+           
         }
 
         private void LoadTrainers()
@@ -49,6 +63,63 @@ namespace Gym_Manager
             }
         }
 
+        private void loadMemberData(int memberID)
+        {
+            string query = "SELECT * FROM members WHERE memberID = @memberID";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@memberID", memberID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            textBox1.Text = reader["memberName"].ToString();
+                            DateTime dob = Convert.ToDateTime(reader["DateOfBirth"]);
+                            dateTimePicker1.Value = dob;
+                            statusDropDown.Text = reader["membershipStatus"].ToString();
+
+                            string gender = reader["Gender"].ToString();
+                            if (gender == "Male")
+                                radioButton1.Checked = true;
+                            else if (gender == "Female")
+                                radioButton2.Checked = true;
+
+                            textBox3.Text = reader["Phone"].ToString();
+
+                            int membershipTypeID = Convert.ToInt32(reader["membershipTypeID"]);
+                            foreach (ComboBoxItem item in MembershipType.Items)
+                            {
+                                if (item.Value == membershipTypeID)
+                                {
+                                    MembershipType.SelectedItem = item;
+                                    break;
+                                }
+                            }
+
+                            if (reader["trainerID"] != DBNull.Value)
+                            {
+                                int trainerID = Convert.ToInt32(reader["trainerID"]);
+                                foreach (ComboBoxItem item in trainers.Items)
+                                {
+                                    if (item.Value == trainerID)
+                                    {
+                                        trainers.SelectedItem = item;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            button1.Text = "Update Member";
+            button1.Click -= button1_Click;
+            button1.Click += new EventHandler(UpdateMember);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             AddMember();
@@ -57,7 +128,7 @@ namespace Gym_Manager
         private void AddMember()
         {
             string name = textBox1.Text;
-            string gender="";
+            string gender = "";
             if (radioButton1.Checked)
             {
                 gender = "Male";
@@ -98,6 +169,7 @@ namespace Gym_Manager
                     {
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Member added successfully.");
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
@@ -105,7 +177,58 @@ namespace Gym_Manager
                     }
                 }
             }
-            
+        }
+
+        private void UpdateMember(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            string gender = "";
+            string status = statusDropDown.Text;
+            if (radioButton1.Checked)
+            {
+                gender = "Male";
+            }
+            else if (radioButton2.Checked)
+            {
+                gender = "Female";
+            }
+            string phone = textBox3.Text;
+            DateTime dateOfBirth = dateTimePicker1.Value;
+            int membershipTypeID = (MembershipType.SelectedItem as ComboBoxItem).Value;
+            int? trainerID = (trainers.SelectedItem as ComboBoxItem)?.Value;
+            if (trainerID == 0)
+            {
+                trainerID = null;
+            }
+
+            string query = "UPDATE members SET memberName = @name, DateOfBirth = @dateOfBirth, Gender = @gender, Phone = @phone, membershipTypeID = @membershipTypeID, trainerID = @trainerID, MembershipStatus=@status WHERE memberID = @memberID";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@memberID", memberIdToEdit);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@gender", gender);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@dateOfBirth", dateOfBirth);
+                    cmd.Parameters.AddWithValue("@status", status);
+                    cmd.Parameters.AddWithValue("@membershipTypeID", membershipTypeID);
+                    cmd.Parameters.AddWithValue("@trainerID", (object)trainerID ?? DBNull.Value);
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Member updated successfully.");    
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error updating member: " + ex.Message);
+                    }
+                }
+            }
         }
 
         private DataTable ExecuteQuery(string query)
@@ -136,11 +259,11 @@ namespace Gym_Manager
         private void MembershipType_SelectedIndexChanged(object sender, EventArgs e)
         {
             string membershipTypeID = (MembershipType.SelectedItem as ComboBoxItem).Value.ToString();
-            string query = "SELECT membershipTypeID, DurationMonths from membershipTypes";
+            string query = "SELECT membershipTypeID, DurationMonths FROM membershipTypes";
             DataTable table12 = ExecuteQuery(query);
             foreach (DataRow row in table12.Rows)
             {
-                if (row["membershipTypeID"].ToString()==membershipTypeID)
+                if (row["membershipTypeID"].ToString() == membershipTypeID)
                     label9.Text = row["DurationMonths"].ToString();
             }
         }

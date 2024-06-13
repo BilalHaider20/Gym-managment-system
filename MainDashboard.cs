@@ -135,5 +135,12 @@ namespace Gym_Manager
             form.ShowDialog();
             countMembers();
         }
+
+        private void viewFaculityMembersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewTrainersForm form = new viewTrainersForm();
+            form.ShowDialog();
+            countMembers();
+        }
     }
 }

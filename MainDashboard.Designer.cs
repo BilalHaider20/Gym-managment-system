@@ -212,7 +212,7 @@
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.addToolStripMenuItem.Text = "Add Member";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -220,7 +220,7 @@
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.viewMembersToolStripMenuItem.Text = "View Members";
             this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click_1);
             // 
@@ -231,21 +231,22 @@
             this.addFaculityMemberToolStripMenuItem,
             this.viewFaculityMembersToolStripMenuItem});
             this.faculityManagementToolStripMenuItem.Name = "faculityManagementToolStripMenuItem";
-            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
-            this.faculityManagementToolStripMenuItem.Text = "Staff";
+            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.faculityManagementToolStripMenuItem.Text = "Trainers";
             // 
             // addFaculityMemberToolStripMenuItem
             // 
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.addFaculityMemberToolStripMenuItem.Text = "Add Staff Member";
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addFaculityMemberToolStripMenuItem.Text = "Add Trainer";
             this.addFaculityMemberToolStripMenuItem.Click += new System.EventHandler(this.addFaculityMemberToolStripMenuItem_Click);
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.viewFaculityMembersToolStripMenuItem.Text = "View Staff Members";
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewFaculityMembersToolStripMenuItem.Text = "View Trainers";
+            this.viewFaculityMembersToolStripMenuItem.Click += new System.EventHandler(this.viewFaculityMembersToolStripMenuItem_Click);
             // 
             // reportsAndAnalyticsToolStripMenuItem
             // 

@@ -128,7 +128,7 @@
             this.MinimizeBox = false;
             this.Name = "AddTrainer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MembersForm";
+            this.Text = "Add Trainer";
             this.Load += new System.EventHandler(this.MemberForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

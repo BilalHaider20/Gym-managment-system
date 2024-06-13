@@ -137,6 +137,7 @@
             // 
             // MembershipType
             // 
+            this.MembershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MembershipType.FormattingEnabled = true;
             this.MembershipType.Location = new System.Drawing.Point(144, 248);
             this.MembershipType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -147,13 +148,13 @@
             // 
             // trainers
             // 
+            this.trainers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.trainers.FormattingEnabled = true;
             this.trainers.Location = new System.Drawing.Point(144, 291);
             this.trainers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trainers.Name = "trainers";
             this.trainers.Size = new System.Drawing.Size(229, 24);
             this.trainers.TabIndex = 14;
-            this.trainers.Text = "None";
             // 
             // label8
             // 
@@ -225,10 +226,12 @@
             // 
             // statusDropDown
             // 
+            this.statusDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statusDropDown.FormattingEnabled = true;
             this.statusDropDown.Items.AddRange(new object[] {
             "Active",
-            "Terminated"});
+            "Terminated",
+            "Expired"});
             this.statusDropDown.Location = new System.Drawing.Point(144, 371);
             this.statusDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.statusDropDown.Name = "statusDropDown";

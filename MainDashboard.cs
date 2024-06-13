@@ -80,7 +80,7 @@ namespace Gym_Manager
         }
         public void countMembers()
         {
-            int totalMembers = Execute_Count("select * from members where membershipStatus != 'Expired'");
+            int totalMembers = Execute_Count("select * from members");
             int ActiveMembers = Execute_Count("select * from members where membershipStatus = 'Active'");
             int trainers = Execute_Count("select * from staff");
 

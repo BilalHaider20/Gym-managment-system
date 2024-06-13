@@ -46,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.statusDropDown = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -173,10 +175,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 378);
+            this.button1.Location = new System.Drawing.Point(23, 417);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(350, 84);
+            this.button1.Size = new System.Drawing.Size(350, 45);
             this.button1.TabIndex = 22;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
@@ -221,11 +223,34 @@
             this.label9.Size = new System.Drawing.Size(23, 16);
             this.label9.TabIndex = 25;
             // 
+            // statusDropDown
+            // 
+            this.statusDropDown.FormattingEnabled = true;
+            this.statusDropDown.Items.AddRange(new object[] {
+            "Active",
+            "Terminated"});
+            this.statusDropDown.Location = new System.Drawing.Point(144, 371);
+            this.statusDropDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.statusDropDown.Name = "statusDropDown";
+            this.statusDropDown.Size = new System.Drawing.Size(229, 24);
+            this.statusDropDown.TabIndex = 27;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 373);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 16);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Status";
+            // 
             // AddMembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 491);
+            this.Controls.Add(this.statusDropDown);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
@@ -275,5 +300,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox statusDropDown;
+        private System.Windows.Forms.Label label11;
     }
 }

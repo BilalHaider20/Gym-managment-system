@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(471, 9);
+            this.label1.Location = new System.Drawing.Point(538, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 38);
             this.label1.TabIndex = 0;
@@ -58,8 +58,9 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1143, 453);
+            this.dataGridView1.Size = new System.Drawing.Size(1330, 453);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // comboBox1
             // 
@@ -69,7 +70,7 @@
             "Active",
             "Terminated",
             "Expired Memberships"});
-            this.comboBox1.Location = new System.Drawing.Point(935, 63);
+            this.comboBox1.Location = new System.Drawing.Point(1122, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(218, 24);
             this.comboBox1.TabIndex = 2;
@@ -79,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(933, 43);
+            this.label2.Location = new System.Drawing.Point(1120, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 3;
@@ -89,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 568);
+            this.ClientSize = new System.Drawing.Size(1352, 568);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);

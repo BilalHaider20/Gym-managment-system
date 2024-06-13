@@ -155,6 +155,11 @@
     <Compile Include="AddTrainer.Designer.cs">
       <DependentUpon>AddTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewTrainersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,14 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="ViewTrainersForm.resx">
       <DependentUpon>ViewTrainersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +221,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled design1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\138580-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12fac24b5fc994ab241ad92cfc7d9fb3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2585134.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

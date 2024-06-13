@@ -221,7 +221,7 @@
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addToolStripMenuItem.Text = "Add Member";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -229,7 +229,7 @@
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewMembersToolStripMenuItem.Text = "View Members";
             this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click_1);
             // 
@@ -246,14 +246,14 @@
             // addFaculityMemberToolStripMenuItem
             // 
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addFaculityMemberToolStripMenuItem.Text = "Add Trainer";
             this.addFaculityMemberToolStripMenuItem.Click += new System.EventHandler(this.addFaculityMemberToolStripMenuItem_Click);
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewFaculityMembersToolStripMenuItem.Text = "View Trainers";
             this.viewFaculityMembersToolStripMenuItem.Click += new System.EventHandler(this.viewFaculityMembersToolStripMenuItem_Click);
             // 
@@ -338,7 +338,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Peru;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(132)))), ((int)(((byte)(62)))));
             this.button5.BackgroundImage = global::Gym_Manager.Properties.Resources._138580_200;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -356,7 +356,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Peru;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(132)))), ((int)(((byte)(62)))));
             this.button6.BackgroundImage = global::Gym_Manager.Properties.Resources.R;
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -373,7 +373,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Peru;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(132)))), ((int)(((byte)(62)))));
             this.button7.BackgroundImage = global::Gym_Manager.Properties.Resources._2585134;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -390,7 +390,7 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Peru;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(132)))), ((int)(((byte)(62)))));
             this.button8.BackgroundImage = global::Gym_Manager.Properties.Resources._12fac24b5fc994ab241ad92cfc7d9fb3;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;

@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Gym_Manager
 {
-    public partial class MembersForm : Form
+    public partial class AddMembersForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
 
-        public MembersForm()
+        public AddMembersForm()
         {
             InitializeComponent();
             trainers.Items.Add(new ComboBoxItem("None","0"));
@@ -108,7 +108,7 @@ namespace Gym_Manager
             
         }
 
-        public DataTable ExecuteQuery(string query)
+        private DataTable ExecuteQuery(string query)
         {
             try
             {

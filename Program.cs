@@ -18,7 +18,7 @@ namespace Gym_Manager
             SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainDashboard());
         }
         [DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();

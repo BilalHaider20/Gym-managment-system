@@ -28,7 +28,7 @@ namespace Gym_Manager
             if(MembershipType.Items.Count > 0)
                 MembershipType.SelectedIndex = 0;
             if(trainers.Items.Count > 0)
-            trainers.SelectedIndex = 0;
+                trainers.SelectedIndex = 0;
         }
 
         public AddMembersForm(int memberID)

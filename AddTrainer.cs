@@ -49,7 +49,7 @@ namespace Gym_Manager
                         {
                             textBox1.Text = reader["Staff_Name"].ToString();
                             textBox3.Text = reader["Phone"].ToString();
-                            textBox2.Text = reader[""].ToString();
+                            textBox2.Text = reader["Position"].ToString();
 
                         }
                     }
@@ -119,7 +119,7 @@ namespace Gym_Manager
             string phone = textBox3.Text;
             string position = textBox2.Text;
             
-            string query = "UPDATE members SET staff_name = @name, Phone = @phone, position=@position WHERE staffID = @staffID";
+            string query = "UPDATE staff SET staff_Name = @name, Phone = @phone, Position=@position WHERE staffID = @staffID";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -142,32 +142,6 @@ namespace Gym_Manager
                         MessageBox.Show("Error updating trainer: " + ex.Message);
                     }
                 }
-            }
-        }
-
-
-        private DataTable ExecuteQuery(string query)
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            DataTable table = new DataTable();
-                            table.Load(reader);
-                            return table;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
             }
         }
     }

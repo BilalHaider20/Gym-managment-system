@@ -25,6 +25,7 @@ namespace Gym_Manager
         {
             LoadMemberData();
             AddButtonColumns();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void LoadMemberData()

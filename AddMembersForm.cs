@@ -24,7 +24,9 @@ namespace Gym_Manager
             LoadTrainers();
             LoadMembershipTypes();
             statusDropDown.Visible = false;
-            label11.Visible = false;    
+            label11.Visible = false;
+            MembershipType.SelectedIndex = 0;
+            trainers.SelectedIndex = 0;
         }
 
         public AddMembersForm(int memberID)
@@ -35,6 +37,7 @@ namespace Gym_Manager
             LoadTrainers();
             LoadMembershipTypes();
             loadMemberData(memberID);
+            trainers.SelectedIndex = 0;
         }
 
         private void MemberForm_Load(object sender, EventArgs e)
@@ -118,12 +121,44 @@ namespace Gym_Manager
             button1.Text = "Update Member";
             label1.Text = "Edit Member";
             button1.Click -= button1_Click;
-            button1.Click += new EventHandler(UpdateMember);
+            button1.Click += new EventHandler(UpdateMemberButton_Click);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddMember();
+            if(string.IsNullOrEmpty(textBox1.Text) || (radioButton1.Checked==false && radioButton2.Checked==false) || string.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("Please fill required fields before proceding.");
+            }
+            else if (!IsOver18(dateTimePicker1.Value))
+            {
+                MessageBox.Show("Underage for Gym Membership.\nAge requirement: 18 years (minimum)");
+            }
+            else
+                AddMember();
+        }
+
+        private bool IsOver18(DateTime birthDate)
+        {
+            DateTime now = DateTime.Today;
+            int age = now.Year - birthDate.Year;
+            if (birthDate > now.AddYears(-age)) age--;
+
+            return age >= 18;
+        }
+        private void UpdateMemberButton_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("Please fill required fields before proceding.");
+            }
+            else if (!IsOver18(dateTimePicker1.Value))
+            {
+                MessageBox.Show("Underage for Gym Membership.\nAge requirement: 18 years (minimum)");
+            }
+            else
+                UpdateMember();
         }
 
         private void AddMember()
@@ -180,7 +215,7 @@ namespace Gym_Manager
             }
         }
 
-        private void UpdateMember(object sender, EventArgs e)
+        private void UpdateMember()
         {
             string name = textBox1.Text;
             string gender = "";
@@ -201,7 +236,6 @@ namespace Gym_Manager
             {
                 trainerID = null;
             }
-
             string query = "UPDATE members SET memberName = @name, DateOfBirth = @dateOfBirth, Gender = @gender, Phone = @phone, membershipTypeID = @membershipTypeID, trainerID = @trainerID, MembershipStatus=@status WHERE memberID = @memberID";
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -221,7 +255,7 @@ namespace Gym_Manager
                     try
                     {
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Member updated successfully.");    
+                        MessageBox.Show("Member updated successfully.");
                         this.Close();
                     }
                     catch (Exception ex)
@@ -231,6 +265,7 @@ namespace Gym_Manager
                 }
             }
         }
+        
 
         private DataTable ExecuteQuery(string query)
         {

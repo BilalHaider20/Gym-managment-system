@@ -180,6 +180,12 @@ namespace Gym_Manager
 
         private void Analytics_btn_click(object sender, EventArgs e)
         {
+            customToolStripMenuItem_Click(sender, e);
+        }
+        
+
+        private void customToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             AnalysisForm analysis = new AnalysisForm();
             analysis.ShowDialog();
         }

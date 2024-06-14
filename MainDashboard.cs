@@ -147,5 +147,11 @@ namespace Gym_Manager
         {
             viewFaculityMembersToolStripMenuItem_Click(sender, e);
         }
+
+        private void Analytics_btn_click(object sender, EventArgs e)
+        {
+            AnalysisForm analysis = new AnalysisForm();
+            analysis.ShowDialog();
+        }
     }
 }

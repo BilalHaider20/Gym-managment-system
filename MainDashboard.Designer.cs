@@ -73,9 +73,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(56, 122);
+            this.button1.Location = new System.Drawing.Point(63, 152);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(380, 88);
+            this.button1.Size = new System.Drawing.Size(428, 110);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Member";
             this.button1.UseVisualStyleBackColor = false;
@@ -88,12 +89,14 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(237, 404);
+            this.button2.Location = new System.Drawing.Point(267, 505);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(380, 88);
+            this.button2.Size = new System.Drawing.Size(428, 110);
             this.button2.TabIndex = 1;
             this.button2.Text = "Analytics";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Analytics_btn_click);
             // 
             // button3
             // 
@@ -102,9 +105,10 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(237, 216);
+            this.button3.Location = new System.Drawing.Point(267, 270);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(380, 88);
+            this.button3.Size = new System.Drawing.Size(428, 110);
             this.button3.TabIndex = 2;
             this.button3.Text = "View Members";
             this.button3.UseVisualStyleBackColor = false;
@@ -119,9 +123,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(688, 92);
+            this.panel1.Location = new System.Drawing.Point(774, 115);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 556);
+            this.panel1.Size = new System.Drawing.Size(358, 695);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -130,9 +135,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.label6.Location = new System.Drawing.Point(175, 340);
+            this.label6.Location = new System.Drawing.Point(197, 425);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 80);
+            this.label6.Size = new System.Drawing.Size(128, 96);
             this.label6.TabIndex = 9;
             this.label6.Text = "00";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -142,9 +147,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(175, 66);
+            this.label5.Location = new System.Drawing.Point(197, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 80);
+            this.label5.Size = new System.Drawing.Size(128, 96);
             this.label5.TabIndex = 8;
             this.label5.Text = "00";
             // 
@@ -153,9 +158,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(175, 215);
+            this.label4.Location = new System.Drawing.Point(197, 269);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 80);
+            this.label4.Size = new System.Drawing.Size(128, 96);
             this.label4.TabIndex = 7;
             this.label4.Text = "00";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -164,9 +169,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 311);
+            this.label3.Location = new System.Drawing.Point(30, 389);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 29);
+            this.label3.Size = new System.Drawing.Size(189, 32);
             this.label3.TabIndex = 6;
             this.label3.Text = "Total Trainers";
             // 
@@ -174,9 +179,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 168);
+            this.label2.Location = new System.Drawing.Point(30, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 29);
+            this.label2.Size = new System.Drawing.Size(216, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Active Members";
             // 
@@ -184,15 +189,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 24);
+            this.label1.Location = new System.Drawing.Point(30, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 29);
+            this.label1.Size = new System.Drawing.Size(202, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Total Members";
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageMembersToolStripMenuItem,
@@ -201,8 +207,9 @@
             this.reportsAndAnalyticsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1188, 33);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -214,14 +221,14 @@
             this.addToolStripMenuItem,
             this.viewMembersToolStripMenuItem});
             this.manageMembersToolStripMenuItem.Name = "manageMembersToolStripMenuItem";
-            this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
             this.manageMembersToolStripMenuItem.Text = "Members";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(231, 34);
             this.addToolStripMenuItem.Text = "Add Member";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -229,7 +236,7 @@
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(231, 34);
             this.viewMembersToolStripMenuItem.Text = "View Members";
             this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click_1);
             // 
@@ -240,20 +247,20 @@
             this.addFaculityMemberToolStripMenuItem,
             this.viewFaculityMembersToolStripMenuItem});
             this.faculityManagementToolStripMenuItem.Name = "faculityManagementToolStripMenuItem";
-            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
             this.faculityManagementToolStripMenuItem.Text = "Trainers";
             // 
             // addFaculityMemberToolStripMenuItem
             // 
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(215, 34);
             this.addFaculityMemberToolStripMenuItem.Text = "Add Trainer";
             this.addFaculityMemberToolStripMenuItem.Click += new System.EventHandler(this.addFaculityMemberToolStripMenuItem_Click);
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(215, 34);
             this.viewFaculityMembersToolStripMenuItem.Text = "View Trainers";
             this.viewFaculityMembersToolStripMenuItem.Click += new System.EventHandler(this.viewFaculityMembersToolStripMenuItem_Click);
             // 
@@ -263,19 +270,19 @@
             this.addMembershipToolStripMenuItem,
             this.viewMembershipsToolStripMenuItem});
             this.membershipsToolStripMenuItem.Name = "membershipsToolStripMenuItem";
-            this.membershipsToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.membershipsToolStripMenuItem.Size = new System.Drawing.Size(136, 29);
             this.membershipsToolStripMenuItem.Text = "Memberships";
             // 
             // addMembershipToolStripMenuItem
             // 
             this.addMembershipToolStripMenuItem.Name = "addMembershipToolStripMenuItem";
-            this.addMembershipToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addMembershipToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.addMembershipToolStripMenuItem.Text = "Add Membership";
             // 
             // viewMembershipsToolStripMenuItem
             // 
             this.viewMembershipsToolStripMenuItem.Name = "viewMembershipsToolStripMenuItem";
-            this.viewMembershipsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewMembershipsToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.viewMembershipsToolStripMenuItem.Text = "View Memberships";
             // 
             // reportsAndAnalyticsToolStripMenuItem
@@ -288,37 +295,37 @@
             this.toolStripSeparator1,
             this.customToolStripMenuItem});
             this.reportsAndAnalyticsToolStripMenuItem.Name = "reportsAndAnalyticsToolStripMenuItem";
-            this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportsAndAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.reportsAndAnalyticsToolStripMenuItem.Text = "Analytics";
             // 
             // membershipToolStripMenuItem
             // 
             this.membershipToolStripMenuItem.Name = "membershipToolStripMenuItem";
-            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.membershipToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
             this.membershipToolStripMenuItem.Text = "Members Analytics";
             // 
             // attendenceToolStripMenuItem
             // 
             this.attendenceToolStripMenuItem.Name = "attendenceToolStripMenuItem";
-            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.attendenceToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
             this.attendenceToolStripMenuItem.Text = "Staff Analytics";
             this.attendenceToolStripMenuItem.Click += new System.EventHandler(this.attendenceToolStripMenuItem_Click);
             // 
             // membershipAnalyticsToolStripMenuItem
             // 
             this.membershipAnalyticsToolStripMenuItem.Name = "membershipAnalyticsToolStripMenuItem";
-            this.membershipAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.membershipAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
             this.membershipAnalyticsToolStripMenuItem.Text = "Membership Analytics";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(235, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(286, 6);
             // 
             // customToolStripMenuItem
             // 
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
-            this.customToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.customToolStripMenuItem.Size = new System.Drawing.Size(289, 34);
             this.customToolStripMenuItem.Text = "Custom";
             // 
             // button4
@@ -328,9 +335,10 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(56, 310);
+            this.button4.Location = new System.Drawing.Point(63, 388);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(380, 88);
+            this.button4.Size = new System.Drawing.Size(428, 110);
             this.button4.TabIndex = 5;
             this.button4.Text = "View Trainers";
             this.button4.UseVisualStyleBackColor = false;
@@ -347,10 +355,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(442, 122);
-            this.button5.Margin = new System.Windows.Forms.Padding(8);
+            this.button5.Location = new System.Drawing.Point(497, 152);
+            this.button5.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(175, 88);
+            this.button5.Size = new System.Drawing.Size(197, 110);
             this.button5.TabIndex = 6;
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -365,9 +373,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(56, 216);
+            this.button6.Location = new System.Drawing.Point(63, 270);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(175, 88);
+            this.button6.Size = new System.Drawing.Size(197, 110);
             this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = false;
             // 
@@ -382,9 +391,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(442, 310);
+            this.button7.Location = new System.Drawing.Point(497, 388);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(175, 88);
+            this.button7.Size = new System.Drawing.Size(197, 110);
             this.button7.TabIndex = 8;
             this.button7.UseVisualStyleBackColor = false;
             // 
@@ -399,20 +409,21 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(56, 404);
+            this.button8.Location = new System.Drawing.Point(63, 505);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(175, 88);
+            this.button8.Size = new System.Drawing.Size(197, 110);
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = false;
             // 
             // MainDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImage = global::Gym_Manager.Properties.Resources.Untitled_design1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1056, 681);
+            this.ClientSize = new System.Drawing.Size(1188, 851);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -426,6 +437,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "MainDashboard";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

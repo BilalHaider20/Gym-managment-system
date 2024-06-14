@@ -63,7 +63,7 @@ namespace Gym_Manager
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            viewMembersToolStripMenuItem_Click_1(sender, e);
+            viewMembersToolStripMenuItem1_Click(sender, e);
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,7 +145,25 @@ namespace Gym_Manager
 
         private void button4_Click(object sender, EventArgs e)
         {
-            viewFaculityMembersToolStripMenuItem_Click(sender, e);
+            viewTrainersToolStripMenuItem_Click(sender, e);
+        }
+
+        private void viewMembersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ViewGymMembers form = new ViewGymMembers();
+            form.ShowDialog();
+        }
+
+        private void viewTrainersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewTrainers form = new viewTrainers();
+            form.ShowDialog();
+        }
+
+        private void addMembershipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMembership form = new AddMembership();
+            form.ShowDialog();
         }
     }
 }

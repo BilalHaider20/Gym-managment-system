@@ -134,9 +134,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(20, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.Size = new System.Drawing.Size(82, 16);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Price:";
+            this.label4.Text = "Price (PKR) :";
             // 
             // AddMembership
             // 

@@ -25,7 +25,7 @@ namespace Gym_Manager
 
         private void AnalysisForm_Load(object sender, EventArgs e)
         {
-            string query = "select count(m.MemberID), e.TypeName from Members m\r\ninner join MembershipTypes e on m.MembershipTypeID=e.MembershipTypeID\r\ngroup by e.TypeName";
+            string query = "select count(m.MemberID) as Members, e.TypeName from Members m\r\ninner join MembershipTypes e on m.MembershipTypeID=e.MembershipTypeID\r\ngroup by e.TypeName";
             DataTable dataTable = ExecuteQuery(query);
 
             if (dataTable != null)
@@ -47,7 +47,7 @@ namespace Gym_Manager
             Series series = new Series
             {
                 Name = "Membership Type",
-                IsVisibleInLegend = true,
+                //IsVisibleInLegend = true,
                 ChartType = SeriesChartType.Pie
             };
 
@@ -55,7 +55,7 @@ namespace Gym_Manager
 
             foreach (DataRow row in dataTable.Rows)
             {
-                series.Points.AddXY(row["TypeName"]);
+                series.Points.AddXY(row["TypeName"], row["Members"]);
             }
 
             MembershipChart.Invalidate();

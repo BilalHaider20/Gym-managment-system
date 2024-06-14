@@ -213,11 +213,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(139, 128);
+            this.dateTimePicker1.Location = new System.Drawing.Point(144, 128);
             this.dateTimePicker1.MaxDate = new System.DateTime(2024, 6, 12, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1920, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(234, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(229, 22);
             this.dateTimePicker1.TabIndex = 24;
             this.dateTimePicker1.Value = new System.DateTime(2024, 6, 12, 0, 0, 0, 0);
             // 

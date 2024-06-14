@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -15,8 +16,9 @@ namespace Gym_Manager
 {
     public partial class AnalysisForm : Form
     {
-        string connectionString = "Server=DESKTOP-T14PAJA\\SQLEXPRESS;Database=Gym-Database;Integrated Security=True";
-        
+        string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
+
+
         public AnalysisForm()
         {
             InitializeComponent();

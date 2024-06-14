@@ -177,5 +177,11 @@ namespace Gym_Manager
             viewMemberships form = new viewMemberships();
             form.ShowDialog();
         }
+
+        private void Analytics_btn_click(object sender, EventArgs e)
+        {
+            AnalysisForm analysis = new AnalysisForm();
+            analysis.ShowDialog();
+        }
     }
 }

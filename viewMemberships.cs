@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Gym_Manager
 {
-    public partial class viewTrainers : Form
+    public partial class viewMemberships : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
 
-        public viewTrainers()
+        public viewMemberships()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Gym_Manager
 
         private void LoadTrainersData()
         {
-            dataGridView1.DataSource = ExecuteQuery("select staffID as ID, staff_Name as Name, Phone, Position from staff;");
+            dataGridView1.DataSource = ExecuteQuery("select MembershipTypeID as ID, TypeName as Membership, Description, DurationMonths as 'Duration (months)', Price from membershipTypes;");
         }
 
 

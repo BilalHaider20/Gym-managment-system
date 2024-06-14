@@ -28,7 +28,7 @@ namespace Gym_Manager
 
         private void LoadTrainersData()
         {
-            dataGridView1.DataSource = ExecuteQuery("select MembershipTypeID as ID, TypeName as Membership, Description, DurationMonths as 'Duration (months)', Price from membershipTypes;");
+            dataGridView1.DataSource = ExecuteQuery("select MembershipTypeID as ID, TypeName as Membership, Description, DurationMonths as 'Duration (months)', Price as 'Price (PKR)' from membershipTypes;");
         }
 
 

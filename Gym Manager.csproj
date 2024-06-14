@@ -155,16 +155,28 @@
     <Compile Include="AddTrainer.Designer.cs">
       <DependentUpon>AddTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMembershipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMembershipForm.Designer.cs">
+      <DependentUpon>AddMembershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewGymMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewGymMembers.Designer.cs">
+      <DependentUpon>ViewGymMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewTrainersForm.cs">
+    <Compile Include="ManageTrainersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewTrainersForm.Designer.cs">
-      <DependentUpon>ViewTrainersForm.cs</DependentUpon>
+    <Compile Include="ManageTrainersForm.Designer.cs">
+      <DependentUpon>ManageTrainersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainDashboard.cs">
       <SubType>Form</SubType>
@@ -172,11 +184,11 @@
     <Compile Include="MainDashboard.Designer.cs">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewGymMembersForm.cs">
+    <Compile Include="ManageGymMembersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewGymMembersForm.Designer.cs">
-      <DependentUpon>ViewGymMembersForm.cs</DependentUpon>
+    <Compile Include="ManageGymMembersForm.Designer.cs">
+      <DependentUpon>ManageGymMembersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddMembersForm.cs">
       <SubType>Form</SubType>
@@ -186,14 +198,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewTrainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTrainers.Designer.cs">
+      <DependentUpon>ViewTrainers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMembershipForm.resx">
+      <DependentUpon>AddMembershipForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTrainer.resx">
       <DependentUpon>AddTrainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainDashboard.resx">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewGymMembersForm.resx">
-      <DependentUpon>ViewGymMembersForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManageGymMembersForm.resx">
+      <DependentUpon>ManageGymMembersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddMembersForm.resx">
       <DependentUpon>AddMembersForm.cs</DependentUpon>
@@ -203,8 +224,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewTrainersForm.resx">
-      <DependentUpon>ViewTrainersForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManageTrainersForm.resx">
+      <DependentUpon>ManageTrainersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewGymMembers.resx">
+      <DependentUpon>ViewGymMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTrainers.resx">
+      <DependentUpon>ViewTrainers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -125,7 +125,7 @@ namespace Gym_Manager
 
                     if (memberCount > 0)
                     {
-                        MessageBox.Show($"Membership cannot be deleted because {memberCount} members have subsribed to it.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Membership cannot be deleted because {memberCount} members have subscribed to it.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }

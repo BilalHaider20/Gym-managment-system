@@ -162,7 +162,7 @@
     </Compile>
     <Compile Include="AnalysisForm.Designer.cs">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
-
+  </Compile>
     <Compile Include="AddMembershipForm.cs">
       <SubType>Form</SubType>
     </Compile>

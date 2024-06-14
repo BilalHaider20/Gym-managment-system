@@ -165,5 +165,17 @@ namespace Gym_Manager
             AddMembership form = new AddMembership();
             form.ShowDialog();
         }
+
+        private void manageMembershipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manageMemberships form = new manageMemberships();
+            form.ShowDialog();
+        }
+
+        private void viewMembershipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewMemberships form = new viewMemberships();
+            form.ShowDialog();
+        }
     }
 }

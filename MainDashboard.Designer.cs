@@ -225,7 +225,7 @@
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.addToolStripMenuItem.Text = "Add Member";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -233,14 +233,14 @@
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.viewMembersToolStripMenuItem.Text = "Manage Members";
             this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click_1);
             // 
             // viewMembersToolStripMenuItem1
             // 
             this.viewMembersToolStripMenuItem1.Name = "viewMembersToolStripMenuItem1";
-            this.viewMembersToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.viewMembersToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
             this.viewMembersToolStripMenuItem1.Text = "View Members";
             this.viewMembersToolStripMenuItem1.Click += new System.EventHandler(this.viewMembersToolStripMenuItem1_Click);
             // 
@@ -258,21 +258,21 @@
             // addFaculityMemberToolStripMenuItem
             // 
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.addFaculityMemberToolStripMenuItem.Text = "Add Trainer";
             this.addFaculityMemberToolStripMenuItem.Click += new System.EventHandler(this.addFaculityMemberToolStripMenuItem_Click);
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.viewFaculityMembersToolStripMenuItem.Text = "Manage Trainers";
             this.viewFaculityMembersToolStripMenuItem.Click += new System.EventHandler(this.viewFaculityMembersToolStripMenuItem_Click);
             // 
             // viewTrainersToolStripMenuItem
             // 
             this.viewTrainersToolStripMenuItem.Name = "viewTrainersToolStripMenuItem";
-            this.viewTrainersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewTrainersToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.viewTrainersToolStripMenuItem.Text = "View Trainers";
             this.viewTrainersToolStripMenuItem.Click += new System.EventHandler(this.viewTrainersToolStripMenuItem_Click);
             // 
@@ -298,12 +298,14 @@
             this.manageMembershipsToolStripMenuItem.Name = "manageMembershipsToolStripMenuItem";
             this.manageMembershipsToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.manageMembershipsToolStripMenuItem.Text = "Manage Memberships";
+            this.manageMembershipsToolStripMenuItem.Click += new System.EventHandler(this.manageMembershipsToolStripMenuItem_Click);
             // 
             // viewMembershipsToolStripMenuItem
             // 
             this.viewMembershipsToolStripMenuItem.Name = "viewMembershipsToolStripMenuItem";
             this.viewMembershipsToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.viewMembershipsToolStripMenuItem.Text = "View Memberships";
+            this.viewMembershipsToolStripMenuItem.Click += new System.EventHandler(this.viewMembershipsToolStripMenuItem_Click);
             // 
             // reportsAndAnalyticsToolStripMenuItem
             // 

@@ -138,6 +138,10 @@ namespace Gym_Manager
             {
                 MessageBox.Show("Underage for Gym Membership.\nAge requirement: 18 years (minimum)");
             }
+            else if (MembershipType.Items.Count == 0)
+            {
+                MessageBox.Show("Membership not selected");
+            }
             else
                 AddMember();
         }
@@ -160,6 +164,10 @@ namespace Gym_Manager
             else if (!IsOver18(dateTimePicker1.Value))
             {
                 MessageBox.Show("Underage for Gym Membership.\nAge requirement: 18 years (minimum)");
+            }
+            else if (MembershipType.Items.Count == 0)
+            {
+                MessageBox.Show("Membership not selected");
             }
             else
                 UpdateMember();

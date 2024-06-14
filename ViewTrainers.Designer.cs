@@ -81,7 +81,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(906, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(906, 286);
             this.dataGridView1.TabIndex = 1;
             // 
             // viewTrainers
@@ -89,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(172)))));
-            this.ClientSize = new System.Drawing.Size(930, 422);
+            this.ClientSize = new System.Drawing.Size(930, 366);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

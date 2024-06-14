@@ -12,24 +12,24 @@ using System.Windows.Forms;
 
 namespace Gym_Manager
 {
-    public partial class viewTrainersForm: Form
+    public partial class manageMemberships : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["GymManagementSystemDb"].ConnectionString;
 
-        public viewTrainersForm()
+        public manageMemberships()
         {
             InitializeComponent();
         }
 
         private void GymMembersForms_Load(object sender, EventArgs e)
         {
-            LoadTrainersData();
+            LoadMembershipsData();
             AddButtonColumns();
         }
 
-        private void LoadTrainersData()
+        private void LoadMembershipsData()
         {
-            dataGridView1.DataSource = ExecuteQuery("select staffID as ID, staff_Name as Name, Phone, Position from staff;");
+            dataGridView1.DataSource = ExecuteQuery("select MembershipTypeID as ID, TypeName as Membership, Description, DurationMonths as 'Duration (months)', Price as 'Price (PKR)' from membershipTypes;");
         }
 
         private void AddButtonColumns()
@@ -85,41 +85,34 @@ namespace Gym_Manager
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string query = "select staffID as ID, staff_Name as Name, Phone, Position from staff;";
-            dataGridView1.DataSource = ExecuteQuery(query);
-            colorizeButtons();
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    int staffID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
-                    EditTrainer(staffID);
+                    int membershipID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    EditMembership(membershipID);
                 }
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    int staffID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
-                    DeleteTrainer(staffID);
+                    int membershipID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    DeleteMembership(membershipID);
                 }
             }
         }
 
-        private void EditTrainer(int staffId)
+        private void EditMembership(int membershipID)
         {
-            AddTrainer editForm = new AddTrainer(staffId);
+            AddMembership editForm = new AddMembership(membershipID);
             editForm.ShowDialog();
-            LoadTrainersData();
+            LoadMembershipsData();
             colorizeButtons();
         }
 
-        private void DeleteTrainer(int staffID)
+        private void DeleteMembership(int membershipID)
         {
-            string checkMembersQuery = "SELECT COUNT(*) FROM members WHERE TrainerID = @staffID";
+            string checkMembersQuery = "SELECT COUNT(*) FROM members WHERE MembershipTypeID = @membershipID";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -127,34 +120,34 @@ namespace Gym_Manager
 
                 using (SqlCommand checkMembersCmd = new SqlCommand(checkMembersQuery, con))
                 {
-                    checkMembersCmd.Parameters.AddWithValue("@staffID", staffID);
+                    checkMembersCmd.Parameters.AddWithValue("@membershipID", membershipID);
                     int memberCount = (int)checkMembersCmd.ExecuteScalar();
 
                     if (memberCount > 0)
                     {
-                        MessageBox.Show($"Trainer cannot be deleted because they are currently associated with {memberCount} members.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Membership cannot be deleted because {memberCount} members have subscribed to it.", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
 
-                var result = MessageBox.Show("Are you sure you want to delete this Trainer?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var result = MessageBox.Show("Are you sure you want to delete this Membership?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    string del_query = "DELETE FROM staff WHERE staffID = @staffID";
+                    string del_query = "DELETE FROM membershipTypes WHERE MembershipTypeID = @membershipID";
 
                     using (SqlCommand cmd = new SqlCommand(del_query, con))
                     {
-                        cmd.Parameters.AddWithValue("@staffID", staffID);
+                        cmd.Parameters.AddWithValue("@membershipID", membershipID);
                         try
                         {
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("Trainer deleted successfully.");
-                            LoadTrainersData();
+                            MessageBox.Show("Membership deleted successfully.");
+                            LoadMembershipsData();
                             colorizeButtons();
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error deleting trainer: " + ex.Message);
+                            MessageBox.Show("Error deleting membership: " + ex.Message);
                         }
                     }
                 }

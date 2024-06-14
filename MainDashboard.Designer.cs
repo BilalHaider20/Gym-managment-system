@@ -43,11 +43,14 @@
             this.manageMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMembersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.faculityManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFaculityMemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewFaculityMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewTrainersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membershipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addMembershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageMembershipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMembershipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,8 +200,9 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(220)))), ((int)(((byte)(195)))));
+
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageMembersToolStripMenuItem,
@@ -219,7 +223,8 @@
             this.manageMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.manageMembersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.viewMembersToolStripMenuItem});
+            this.viewMembersToolStripMenuItem,
+            this.viewMembersToolStripMenuItem1});
             this.manageMembersToolStripMenuItem.Name = "manageMembersToolStripMenuItem";
             this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
             this.manageMembersToolStripMenuItem.Text = "Members";
@@ -228,7 +233,9 @@
             // 
             this.addToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(231, 34);
+
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+
             this.addToolStripMenuItem.Text = "Add Member";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -236,16 +243,27 @@
             // 
             this.viewMembersToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.viewMembersToolStripMenuItem.Name = "viewMembersToolStripMenuItem";
-            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(231, 34);
-            this.viewMembersToolStripMenuItem.Text = "View Members";
+
+
+            this.viewMembersToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.viewMembersToolStripMenuItem.Text = "Manage Members";
+
             this.viewMembersToolStripMenuItem.Click += new System.EventHandler(this.viewMembersToolStripMenuItem_Click_1);
+            // 
+            // viewMembersToolStripMenuItem1
+            // 
+            this.viewMembersToolStripMenuItem1.Name = "viewMembersToolStripMenuItem1";
+            this.viewMembersToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
+            this.viewMembersToolStripMenuItem1.Text = "View Members";
+            this.viewMembersToolStripMenuItem1.Click += new System.EventHandler(this.viewMembersToolStripMenuItem1_Click);
             // 
             // faculityManagementToolStripMenuItem
             // 
             this.faculityManagementToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.faculityManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addFaculityMemberToolStripMenuItem,
-            this.viewFaculityMembersToolStripMenuItem});
+            this.viewFaculityMembersToolStripMenuItem,
+            this.viewTrainersToolStripMenuItem});
             this.faculityManagementToolStripMenuItem.Name = "faculityManagementToolStripMenuItem";
             this.faculityManagementToolStripMenuItem.Size = new System.Drawing.Size(87, 29);
             this.faculityManagementToolStripMenuItem.Text = "Trainers";
@@ -253,21 +271,36 @@
             // addFaculityMemberToolStripMenuItem
             // 
             this.addFaculityMemberToolStripMenuItem.Name = "addFaculityMemberToolStripMenuItem";
-            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(215, 34);
+
+
+            this.addFaculityMemberToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+
             this.addFaculityMemberToolStripMenuItem.Text = "Add Trainer";
             this.addFaculityMemberToolStripMenuItem.Click += new System.EventHandler(this.addFaculityMemberToolStripMenuItem_Click);
             // 
             // viewFaculityMembersToolStripMenuItem
             // 
             this.viewFaculityMembersToolStripMenuItem.Name = "viewFaculityMembersToolStripMenuItem";
-            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(215, 34);
-            this.viewFaculityMembersToolStripMenuItem.Text = "View Trainers";
+
+           
+
+            this.viewFaculityMembersToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.viewFaculityMembersToolStripMenuItem.Text = "Manage Trainers";
+
             this.viewFaculityMembersToolStripMenuItem.Click += new System.EventHandler(this.viewFaculityMembersToolStripMenuItem_Click);
+            // 
+            // viewTrainersToolStripMenuItem
+            // 
+            this.viewTrainersToolStripMenuItem.Name = "viewTrainersToolStripMenuItem";
+            this.viewTrainersToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.viewTrainersToolStripMenuItem.Text = "View Trainers";
+            this.viewTrainersToolStripMenuItem.Click += new System.EventHandler(this.viewTrainersToolStripMenuItem_Click);
             // 
             // membershipsToolStripMenuItem
             // 
             this.membershipsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addMembershipToolStripMenuItem,
+            this.manageMembershipsToolStripMenuItem,
             this.viewMembershipsToolStripMenuItem});
             this.membershipsToolStripMenuItem.Name = "membershipsToolStripMenuItem";
             this.membershipsToolStripMenuItem.Size = new System.Drawing.Size(136, 29);
@@ -276,14 +309,27 @@
             // addMembershipToolStripMenuItem
             // 
             this.addMembershipToolStripMenuItem.Name = "addMembershipToolStripMenuItem";
-            this.addMembershipToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
+
+            this.addMembershipToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+
             this.addMembershipToolStripMenuItem.Text = "Add Membership";
+            this.addMembershipToolStripMenuItem.Click += new System.EventHandler(this.addMembershipToolStripMenuItem_Click);
+            // 
+            // manageMembershipsToolStripMenuItem
+            // 
+            this.manageMembershipsToolStripMenuItem.Name = "manageMembershipsToolStripMenuItem";
+            this.manageMembershipsToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.manageMembershipsToolStripMenuItem.Text = "Manage Memberships";
+            this.manageMembershipsToolStripMenuItem.Click += new System.EventHandler(this.manageMembershipsToolStripMenuItem_Click);
             // 
             // viewMembershipsToolStripMenuItem
             // 
             this.viewMembershipsToolStripMenuItem.Name = "viewMembershipsToolStripMenuItem";
-            this.viewMembershipsToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
+
+            this.viewMembershipsToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+
             this.viewMembershipsToolStripMenuItem.Text = "View Memberships";
+            this.viewMembershipsToolStripMenuItem.Click += new System.EventHandler(this.viewMembershipsToolStripMenuItem_Click);
             // 
             // reportsAndAnalyticsToolStripMenuItem
             // 
@@ -486,6 +532,9 @@
         private System.Windows.Forms.ToolStripMenuItem membershipsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addMembershipToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMembershipsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMembersToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem viewTrainersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageMembershipsToolStripMenuItem;
     }
 }
 

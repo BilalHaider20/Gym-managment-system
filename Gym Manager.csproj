@@ -156,18 +156,23 @@
     <Compile Include="AddTrainer.Designer.cs">
       <DependentUpon>AddTrainer.cs</DependentUpon>
     </Compile>
-
     <Compile Include="AnalysisForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AnalysisForm.Designer.cs">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
-  </Compile>
+    </Compile>
     <Compile Include="AddMembershipForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddMembershipForm.Designer.cs">
       <DependentUpon>AddMembershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About Us.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About Us.Designer.cs">
+      <DependentUpon>About Us.cs</DependentUpon>
     </Compile>
     <Compile Include="manageMemberships.cs">
       <SubType>Form</SubType>
@@ -180,7 +185,6 @@
     </Compile>
     <Compile Include="ViewGymMembers.Designer.cs">
       <DependentUpon>ViewGymMembers.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -233,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnalysisForm.resx">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About Us.resx">
+      <DependentUpon>About Us.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainDashboard.resx">
       <DependentUpon>MainDashboard.cs</DependentUpon>

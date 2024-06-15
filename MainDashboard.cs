@@ -189,5 +189,11 @@ namespace Gym_Manager
             AnalysisForm analysis = new AnalysisForm();
             analysis.ShowDialog();
         }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About_Us form = new About_Us(); 
+            form.ShowDialog();
+        }
     }
 }

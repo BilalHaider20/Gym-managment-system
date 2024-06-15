@@ -54,6 +54,7 @@
             this.viewMembershipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsAndAnalyticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -198,10 +199,10 @@
             this.manageMembersToolStripMenuItem,
             this.faculityManagementToolStripMenuItem,
             this.membershipsToolStripMenuItem,
-            this.reportsAndAnalyticsToolStripMenuItem});
+            this.reportsAndAnalyticsToolStripMenuItem,
+            this.aboutUsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
             this.menuStrip1.TabIndex = 4;
@@ -316,11 +317,18 @@
             // 
             // customToolStripMenuItem
             // 
-            this.customToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(141)))), ((int)(((byte)(75)))));
+            this.customToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.customToolStripMenuItem.Name = "customToolStripMenuItem";
             this.customToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.customToolStripMenuItem.Text = "View Analytics";
             this.customToolStripMenuItem.Click += new System.EventHandler(this.customToolStripMenuItem_Click);
+            // 
+            // aboutUsToolStripMenuItem
+            // 
+            this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.aboutUsToolStripMenuItem.Text = "About Us";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -349,7 +357,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(442, 122);
-            this.button5.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.button5.Margin = new System.Windows.Forms.Padding(8);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(175, 88);
             this.button5.TabIndex = 6;
@@ -474,6 +482,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewMembersToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem viewTrainersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageMembershipsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
     }
 }
 

@@ -82,8 +82,8 @@ namespace Gym_Manager
                 }
                 series["PieLabelStyle"] = "Outside";
                 series.BorderWidth = 1;
-                series.BorderColor = Color.Black;
-                series["PieLineColor"] = "Black";
+                series.BorderColor = Color.Silver;
+                series["PieLineColor"] = "black";
                 series.LegendText = "#VALX (#PERCENT{P0})";
 
                 MembershipChart.Legends[0].Docking = Docking.Bottom;

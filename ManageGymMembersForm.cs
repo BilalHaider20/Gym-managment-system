@@ -25,12 +25,13 @@ namespace Gym_Manager
         {
             LoadMemberData();
             AddButtonColumns();
-            comboBox1.SelectedIndex = 0;
+            if(comboBox1.Items.Count>0)
+                comboBox1.SelectedIndex = 0;
         }
 
         private void LoadMemberData()
         {
-            dataGridView1.DataSource = ExecuteQuery("SELECT a.MemberID AS ID, a.MemberName AS Name, DATEDIFF(year, a.DateOfBirth, GETDATE()) AS Age, a.Gender, a.Phone AS 'Contact No.', c.staff_name AS 'Trainer Name', d.TypeName AS 'Membership Type', d.DurationMonths AS 'Duration (months)', FORMAT(a.MembershipStartDate, 'dd/MM/yyyy') AS 'Membership Start Date', FORMAT(a.MembershipEndDate, 'dd/MM/yyyy') AS 'Membership End Date', a.membershipStatus AS 'Status' FROM members a LEFT JOIN staff c ON a.trainerID = c.staffID JOIN membershipTypes d ON a.membershipTypeID = d.membershipTypeID;");
+            dataGridView1.DataSource = ExecuteQuery("SELECT a.MemberID AS 'Member ID', a.MemberName AS Name, DATEDIFF(year, a.DateOfBirth, GETDATE()) AS Age, a.Gender, a.Phone AS 'Contact No.', c.staff_name AS 'Trainer Name', d.TypeName AS 'Membership Type', d.DurationMonths AS 'Duration (months)', FORMAT(a.MembershipStartDate, 'dd/MM/yyyy') AS 'Membership Start Date', FORMAT(a.MembershipEndDate, 'dd/MM/yyyy') AS 'Membership End Date', a.membershipStatus AS 'Status' FROM members a LEFT JOIN staff c ON a.trainerID = c.staffID JOIN membershipTypes d ON a.membershipTypeID = d.membershipTypeID;");
         }
 
         private void AddButtonColumns()
@@ -89,7 +90,7 @@ namespace Gym_Manager
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string status = comboBox1.Text;
-            string query = "SELECT a.MemberID AS ID, a.MemberName AS Name, DATEDIFF(year, a.DateOfBirth, GETDATE()) AS Age, a.Gender, a.Phone AS 'Contact No.', c.staff_name AS 'Trainer Name', d.TypeName AS 'Membership Type', d.DurationMonths AS 'Duration (months)', FORMAT(a.MembershipStartDate, 'dd/MM/yyyy') AS 'Membership Start Date', FORMAT(a.MembershipEndDate, 'dd/MM/yyyy') AS 'Membership End Date', a.membershipStatus AS 'Status' FROM members a LEFT JOIN staff c ON a.trainerID = c.staffID JOIN membershipTypes d ON a.membershipTypeID = d.membershipTypeID";
+            string query = "SELECT a.MemberID AS  'Member ID', a.MemberName AS Name, DATEDIFF(year, a.DateOfBirth, GETDATE()) AS Age, a.Gender, a.Phone AS 'Contact No.', c.staff_name AS 'Trainer Name', d.TypeName AS 'Membership Type', d.DurationMonths AS 'Duration (months)', FORMAT(a.MembershipStartDate, 'dd/MM/yyyy') AS 'Membership Start Date', FORMAT(a.MembershipEndDate, 'dd/MM/yyyy') AS 'Membership End Date', a.membershipStatus AS 'Status' FROM members a LEFT JOIN staff c ON a.trainerID = c.staffID JOIN membershipTypes d ON a.membershipTypeID = d.membershipTypeID";
 
             if (status == "Active")
             {
@@ -114,12 +115,12 @@ namespace Gym_Manager
             {
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    int memberId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    int memberId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Member ID"].Value);
                     EditMember(memberId);
                 }
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    int memberId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    int memberId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Member ID"].Value);
                     DeleteMember(memberId);
                 }
             }

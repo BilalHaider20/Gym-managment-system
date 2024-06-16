@@ -28,7 +28,7 @@ namespace Gym_Manager
 
         private void LoadTrainersData()
         {
-            dataGridView1.DataSource = ExecuteQuery("select staffID as ID, staff_Name as Name, Phone, Position from staff;");
+            dataGridView1.DataSource = ExecuteQuery("select staffID as 'Trainer ID', staff_Name as Name, Phone, Position from staff;");
         }
 
 

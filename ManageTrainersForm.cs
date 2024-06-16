@@ -29,7 +29,7 @@ namespace Gym_Manager
 
         private void LoadTrainersData()
         {
-            dataGridView1.DataSource = ExecuteQuery("select staffID as ID, staff_Name as Name, Phone, Position from staff;");
+            dataGridView1.DataSource = ExecuteQuery("select staffID as 'Trainer ID', staff_Name as Name, Phone, Position from staff;");
         }
 
         private void AddButtonColumns()
@@ -91,12 +91,12 @@ namespace Gym_Manager
             {
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    int staffID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    int staffID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Trainer ID"].Value);
                     EditTrainer(staffID);
                 }
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    int staffID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    int staffID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Trainer ID"].Value);
                     DeleteTrainer(staffID);
                 }
             }

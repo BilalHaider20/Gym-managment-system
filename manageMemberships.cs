@@ -29,7 +29,7 @@ namespace Gym_Manager
 
         private void LoadMembershipsData()
         {
-            dataGridView1.DataSource = ExecuteQuery("select MembershipTypeID as ID, TypeName as Membership, Description, DurationMonths as 'Duration (months)', Price as 'Price (PKR)' from membershipTypes;");
+            dataGridView1.DataSource = ExecuteQuery("select MembershipTypeID as 'Membership ID', TypeName as 'Membership Name', Description, DurationMonths as 'Duration (months)', Price as 'Price (PKR)' from membershipTypes;");
         }
 
         private void AddButtonColumns()
@@ -91,12 +91,12 @@ namespace Gym_Manager
             {
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
                 {
-                    int membershipID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    int membershipID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Membership ID"].Value);
                     EditMembership(membershipID);
                 }
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
                 {
-                    int membershipID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ID"].Value);
+                    int membershipID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Membership ID"].Value);
                     DeleteMembership(membershipID);
                 }
             }

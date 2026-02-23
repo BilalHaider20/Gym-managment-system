@@ -34,10 +34,57 @@ The GYM Management System is a comprehensive application developed using C# WinF
 - Navigate through the main menu to access member, membership, and trainer management sections.
 - Use the analytics dashboard to view growth trends in membership categories.
 
+## Database Schema
+
+The application uses a **SQL Server** database named `Gym-Database`. The full schema (with `CREATE TABLE` statements) is available in [`DatabaseSchema.sql`](./DatabaseSchema.sql).
+
+### Tables
+
+#### `MembershipTypes`
+| Column | Type | Notes |
+|---|---|---|
+| `MembershipTypeID` | `INT IDENTITY` | Primary Key |
+| `TypeName` | `VARCHAR(100)` | Plan name (e.g. "Monthly", "Annual") |
+| `Description` | `VARCHAR(500)` | Benefits / details of the plan |
+| `DurationMonths` | `INT` | Length of the plan in months |
+| `Price` | `DECIMAL(10,2)` | Cost in PKR |
+
+#### `Staff`
+| Column | Type | Notes |
+|---|---|---|
+| `StaffID` | `INT IDENTITY` | Primary Key |
+| `Staff_Name` | `VARCHAR(100)` | Full name of the trainer |
+| `Phone` | `VARCHAR(20)` | Contact number |
+| `Position` | `VARCHAR(100)` | Role (e.g. "Head Trainer", "Nutritionist") |
+
+#### `Members`
+| Column | Type | Notes |
+|---|---|---|
+| `MemberID` | `INT IDENTITY` | Primary Key |
+| `MemberName` | `VARCHAR(100)` | Full name of the member |
+| `DateOfBirth` | `DATETIME` | Used to calculate age (minimum 18 years) |
+| `Gender` | `VARCHAR(10)` | `'Male'` or `'Female'` |
+| `Phone` | `VARCHAR(20)` | Contact number |
+| `MembershipTypeID` | `INT` | **FK → MembershipTypes.MembershipTypeID** |
+| `TrainerID` | `INT` (nullable) | **FK → Staff.StaffID** — `NULL` if no trainer assigned |
+| `MembershipStartDate` | `DATETIME` | Date the membership began |
+| `MembershipEndDate` | `DATETIME` | Calculated: `DATEADD(month, DurationMonths, StartDate)` |
+| `MembershipStatus` | `VARCHAR(20)` | `'Active'`, `'Expired'`, or `'Terminated'` |
+
+### Relationships
+
+```
+MembershipTypes ──< Members >── Staff
+  (required)          (FK)      (optional)
+```
+
+- `Members.MembershipTypeID` → `MembershipTypes.MembershipTypeID` (**INNER JOIN** – every member must have a plan)
+- `Members.TrainerID` → `Staff.StaffID` (**LEFT JOIN** – trainer assignment is optional)
+
 ## Technologies Used
 
 - **C# WinForms:** For building the user interface.
-- **SQL Database:** For managing and storing gym data.
+- **SQL Server:** For managing and storing gym data.
 - **.NET Framework:** The application is built on the .NET Framework.
 
 ## License
